@@ -1,1 +1,22 @@
+### Création Unité d'organisation 
+'''bash 
+New-ADOrganizationalUnit -Name "Wilders_students"
+'''
+
+### Création d'un groupe Utilisateur
+'''bash 
+New-ADGroup -Name "Students" -Path "OU=Wilders_students,DC=wilders,DC=lan" -GroupScope Global -GroupCategory Security
+'''
+
+### Ajouter un utilisateur dans le groupe 
+'''bash 
+Add-ADGroupMember -Identity "Students" -Members "Administrâtor"
+''' 
+
+
+
+
+
+
+
 
